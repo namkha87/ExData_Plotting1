@@ -10,7 +10,7 @@ readData <- function () {
 
 plot2 <- function (x) {
     timev <- strptime(paste(format(x$Date, '%d/%m/%Y'), x$Time), '%d/%m/%Y %H:%M:%S')
-    plot(range(timev), range(x$Global_active_power), type = 'n', ylab = 'Global Active Power (kilowatts)', xlab = )
+    plot(range(timev), range(x$Global_active_power), type = 'n', ylab = 'Global Active Power (kilowatts)', xlab = '')
     lines(timev, x$Global_active_power, col = 'black')
 }
 
