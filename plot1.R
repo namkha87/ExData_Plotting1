@@ -9,7 +9,7 @@ readData <- function () {
 }
 
 plot1 <- function (x) {
-    hist(x$Global_active_power, main = 'Global Active Power', xlab = 'Global Active Power (kilowatts)', col = c("green"))
+    hist(x$Global_active_power, main = 'Global Active Power', xlab = 'Global Active Power (kilowatts)', col = c("red"))
 }
 
 data <- readData()

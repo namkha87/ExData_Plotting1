@@ -11,20 +11,20 @@ readData <- function () {
 
 plotVoltage <- function (x) {
     timev <- strptime(paste(format(x$Date, '%d/%m/%Y'), x$Time), '%d/%m/%Y %H:%M:%S')
-    plot(range(timev), range(x$Voltage), type = 'n', xlab = 'datetime')
-    lines(timev, x$Voltage, col = 'blue')
+    plot(range(timev), range(x$Voltage), type = 'n', xlab = 'datetime', ylab = 'Voltage')
+    lines(timev, x$Voltage, col = 'black')
 }
 
 plotGlobalActivePower <- function (x) {
     timev <- strptime(paste(format(x$Date, '%d/%m/%Y'), x$Time), '%d/%m/%Y %H:%M:%S')
     plot(range(timev), range(x$Global_active_power), type = 'n', ylab = 'Global Active Power (kilowatts)', xlab = '')
-    lines(timev, x$Global_active_power, col = 'red')
+    lines(timev, x$Global_active_power, col = 'black')
 }
 
 plotGlobalReactivePower <- function (x) {
     timev <- strptime(paste(format(x$Date, '%d/%m/%Y'), x$Time), '%d/%m/%Y %H:%M:%S')
     plot(range(timev), range(x$Global_reactive_power), type = 'n', ylab = 'Global Reactive Power', xlab = 'datetime')
-    lines(timev, x$Global_reactive_power, col = 'orange')
+    lines(timev, x$Global_reactive_power, col = 'black')
 }
 
 plotEnergySubMeeting <- function (x) {
